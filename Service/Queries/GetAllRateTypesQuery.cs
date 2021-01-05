@@ -24,7 +24,7 @@ namespace Service.Queries
             {
                 new RateTypes
                 {
-                    RateTypeID = Guid.NewGuid(),
+                    RateTypeID = new int(),
                         RateType = "vip",
                         Description = "sss",
                         SortOrder = "123",

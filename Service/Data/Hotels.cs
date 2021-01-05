@@ -7,7 +7,7 @@ namespace Service.Data
     public class Hotels
     {
         [Key]
-        public Guid HotelID { get; set; }
+        public int HotelID { get; set; }
         public string HotelCode { get; set; }
         [Required]
         [StringLength(50, MinimumLength = 5)]

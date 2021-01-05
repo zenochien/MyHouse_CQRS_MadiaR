@@ -7,7 +7,7 @@ namespace Service.Data
     public class Guests
     {
         [Key]
-        public Guid GuestID { get; set; }
+        public int GuestID { get; set; }
         [Required]
         [StringLength(50, MinimumLength = 5)]
         public string FirstName { get; set; }

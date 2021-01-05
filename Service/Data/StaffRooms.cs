@@ -10,9 +10,9 @@ namespace Service.Data
     public class StaffRooms
     {
         [Key]
-        public Guid StaffRoomID { get; set; }
-        public Guid RoomID { get; set; }
-        public Guid StaffID { get; set; }
+        public int StaffRoomID { get; set; }
+        public int RoomID { get; set; }
+        public int StaffID { get; set; }
 
         [ForeignKey("RoomID")]
         public virtual Rooms Rooms { get; set; }

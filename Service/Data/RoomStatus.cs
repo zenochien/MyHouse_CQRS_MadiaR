@@ -9,7 +9,7 @@ namespace Service.Data
     public class RoomStatus
     {
         [Key]
-        public Guid RoomStatusID { get; set; }
+        public int RoomStatusID { get; set; }
         public  string RoomsStatus { get; set; }
         public string Description { get; set; }
         public string SortOrder { get; set; }

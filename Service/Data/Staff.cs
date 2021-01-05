@@ -10,14 +10,14 @@ namespace Service.Data
     public class Staff
     {
         [Key]
-        public Guid StaffID { get; set; }
+        public int StaffID { get; set; }
         [Required]
         [StringLength(50, MinimumLength = 5)]
         public string FirstName { get; set; }
         [Required]
         [StringLength(50, MinimumLength = 5)]
         public string LastName { get; set; }
-        public Guid PositionID { get; set; }
+        public int PositionID { get; set; }
         public string Address { get; set; }
         public string Address2 { get; set; }
         public string City { get; set; }

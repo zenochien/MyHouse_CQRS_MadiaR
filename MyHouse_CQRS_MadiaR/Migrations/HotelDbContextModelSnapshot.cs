@@ -21,12 +21,13 @@ namespace MyHouse_CQRS_MadiaR.Migrations
 
             modelBuilder.Entity("Service.Data.Booking", b =>
                 {
-                    b.Property<Guid>("BookingID")
+                    b.Property<int>("BookingID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<Guid>("BookingStatusID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("BookingStatusID")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("DateFrom")
                         .HasColumnType("datetime2");
@@ -34,20 +35,20 @@ namespace MyHouse_CQRS_MadiaR.Migrations
                     b.Property<DateTime?>("DateTo")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("GuestID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("GuestID")
+                        .HasColumnType("int");
 
-                    b.Property<Guid>("HotelID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("HotelID")
+                        .HasColumnType("int");
 
-                    b.Property<Guid>("ReservationAgentID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("ReservationAgentID")
+                        .HasColumnType("int");
 
                     b.Property<string>("RoomCount")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("RoomsBookedID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int?>("RoomsBookedID")
+                        .HasColumnType("int");
 
                     b.HasKey("BookingID");
 
@@ -66,21 +67,22 @@ namespace MyHouse_CQRS_MadiaR.Migrations
 
             modelBuilder.Entity("Service.Data.BookingStatus", b =>
                 {
-                    b.Property<Guid>("BookingStatusID")
+                    b.Property<int>("BookingStatusID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Active")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("BookingStatusID1")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int?>("BookingStatusID1")
+                        .HasColumnType("int");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("ReservationAgentsReservationAgentID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int?>("ReservationAgentsReservationAgentID")
+                        .HasColumnType("int");
 
                     b.Property<string>("SortOrder")
                         .HasColumnType("nvarchar(max)");
@@ -99,9 +101,10 @@ namespace MyHouse_CQRS_MadiaR.Migrations
 
             modelBuilder.Entity("Service.Data.Guests", b =>
                 {
-                    b.Property<Guid>("GuestID")
+                    b.Property<int>("GuestID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
@@ -154,9 +157,10 @@ namespace MyHouse_CQRS_MadiaR.Migrations
 
             modelBuilder.Entity("Service.Data.Hotels", b =>
                 {
-                    b.Property<Guid>("HotelID")
+                    b.Property<int>("HotelID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
@@ -214,9 +218,10 @@ namespace MyHouse_CQRS_MadiaR.Migrations
 
             modelBuilder.Entity("Service.Data.PaymentStatus", b =>
                 {
-                    b.Property<Guid>("PaymentStatusID")
+                    b.Property<int>("PaymentStatusID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Active")
                         .HasColumnType("nvarchar(max)");
@@ -224,8 +229,8 @@ namespace MyHouse_CQRS_MadiaR.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("PaymentTypesPaymentTypeID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int?>("PaymentTypesPaymentTypeID")
+                        .HasColumnType("int");
 
                     b.Property<string>("SortOrder")
                         .HasColumnType("nvarchar(max)");
@@ -242,9 +247,10 @@ namespace MyHouse_CQRS_MadiaR.Migrations
 
             modelBuilder.Entity("Service.Data.PaymentTypes", b =>
                 {
-                    b.Property<Guid>("PaymentTypeID")
+                    b.Property<int>("PaymentTypeID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Active")
                         .HasColumnType("nvarchar(max)");
@@ -262,9 +268,10 @@ namespace MyHouse_CQRS_MadiaR.Migrations
 
             modelBuilder.Entity("Service.Data.Payments", b =>
                 {
-                    b.Property<Guid>("PaymentID")
+                    b.Property<int>("PaymentID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime?>("Date")
                         .HasColumnType("datetime2");
@@ -272,17 +279,17 @@ namespace MyHouse_CQRS_MadiaR.Migrations
                     b.Property<string>("Payment")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("PaymentStatsID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("PaymentStatsID")
+                        .HasColumnType("int");
 
-                    b.Property<Guid?>("PaymentStatusID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int?>("PaymentStatusID")
+                        .HasColumnType("int");
 
-                    b.Property<Guid>("PaymentTypeID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("PaymentTypeID")
+                        .HasColumnType("int");
 
-                    b.Property<Guid>("RoomID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("RoomID")
+                        .HasColumnType("int");
 
                     b.HasKey("PaymentID");
 
@@ -297,9 +304,10 @@ namespace MyHouse_CQRS_MadiaR.Migrations
 
             modelBuilder.Entity("Service.Data.Positions", b =>
                 {
-                    b.Property<Guid>("PositionID")
+                    b.Property<int>("PositionID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Active")
                         .HasColumnType("nvarchar(max)");
@@ -317,9 +325,10 @@ namespace MyHouse_CQRS_MadiaR.Migrations
 
             modelBuilder.Entity("Service.Data.RateTypes", b =>
                 {
-                    b.Property<Guid>("RateTypeID")
+                    b.Property<int>("RateTypeID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Active")
                         .HasColumnType("nvarchar(max)");
@@ -340,27 +349,28 @@ namespace MyHouse_CQRS_MadiaR.Migrations
 
             modelBuilder.Entity("Service.Data.Rates", b =>
                 {
-                    b.Property<Guid>("RateID")
+                    b.Property<int>("RateID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime?>("FromDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("PositionsPositionID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int?>("PositionsPositionID")
+                        .HasColumnType("int");
 
                     b.Property<int>("Rate")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("RateTypeID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("RateTypeID")
+                        .HasColumnType("int");
 
-                    b.Property<Guid>("RoomID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("RoomID")
+                        .HasColumnType("int");
 
-                    b.Property<Guid?>("RoomsID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int?>("RoomsID")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("ToDate")
                         .HasColumnType("datetime2");
@@ -378,9 +388,10 @@ namespace MyHouse_CQRS_MadiaR.Migrations
 
             modelBuilder.Entity("Service.Data.ReservationAgents", b =>
                 {
-                    b.Property<Guid>("ReservationAgentID")
+                    b.Property<int>("ReservationAgentID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
@@ -431,9 +442,10 @@ namespace MyHouse_CQRS_MadiaR.Migrations
 
             modelBuilder.Entity("Service.Data.RoomStatus", b =>
                 {
-                    b.Property<Guid>("RoomStatusID")
+                    b.Property<int>("RoomStatusID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Active")
                         .HasColumnType("nvarchar(max)");
@@ -454,9 +466,10 @@ namespace MyHouse_CQRS_MadiaR.Migrations
 
             modelBuilder.Entity("Service.Data.RoomTypes", b =>
                 {
-                    b.Property<Guid>("RoomTypeID")
+                    b.Property<int>("RoomTypeID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Active")
                         .HasColumnType("nvarchar(max)");
@@ -477,9 +490,10 @@ namespace MyHouse_CQRS_MadiaR.Migrations
 
             modelBuilder.Entity("Service.Data.Rooms", b =>
                 {
-                    b.Property<Guid>("RoomsID")
+                    b.Property<int>("RoomsID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Desription")
                         .HasColumnType("nvarchar(max)");
@@ -490,11 +504,11 @@ namespace MyHouse_CQRS_MadiaR.Migrations
                     b.Property<string>("RoomNumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("RoomStatusID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("RoomStatusID")
+                        .HasColumnType("int");
 
-                    b.Property<Guid>("RoomTypeID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("RoomTypeID")
+                        .HasColumnType("int");
 
                     b.HasKey("RoomsID");
 
@@ -507,18 +521,19 @@ namespace MyHouse_CQRS_MadiaR.Migrations
 
             modelBuilder.Entity("Service.Data.RoomsBooked", b =>
                 {
-                    b.Property<Guid>("RoomBookedID")
+                    b.Property<int>("RoomBookedID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<Guid>("BookingID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("BookingID")
+                        .HasColumnType("int");
 
                     b.Property<int>("Rate")
                         .HasColumnType("int");
 
-                    b.Property<Guid?>("RoomsBookedRoomBookedID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int?>("RoomsBookedRoomBookedID")
+                        .HasColumnType("int");
 
                     b.HasKey("RoomBookedID");
 
@@ -529,9 +544,10 @@ namespace MyHouse_CQRS_MadiaR.Migrations
 
             modelBuilder.Entity("Service.Data.Staff", b =>
                 {
-                    b.Property<Guid>("StaffID")
+                    b.Property<int>("StaffID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
@@ -566,8 +582,8 @@ namespace MyHouse_CQRS_MadiaR.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
-                    b.Property<Guid>("PositionID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("PositionID")
+                        .HasColumnType("int");
 
                     b.Property<string>("State")
                         .HasColumnType("nvarchar(max)");
@@ -587,18 +603,19 @@ namespace MyHouse_CQRS_MadiaR.Migrations
 
             modelBuilder.Entity("Service.Data.StaffRooms", b =>
                 {
-                    b.Property<Guid>("StaffRoomID")
+                    b.Property<int>("StaffRoomID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<Guid>("RoomID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("RoomID")
+                        .HasColumnType("int");
 
-                    b.Property<Guid>("StaffID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("StaffID")
+                        .HasColumnType("int");
 
-                    b.Property<Guid?>("StaffID1")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int?>("StaffID1")
+                        .HasColumnType("int");
 
                     b.HasKey("StaffRoomID");
 

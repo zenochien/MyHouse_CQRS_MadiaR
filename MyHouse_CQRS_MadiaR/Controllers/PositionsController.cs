@@ -1,6 +1,8 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Service.Command;
+using Service.Command.DeleteCommand;
+using Service.Command.UpdateCommand;
 using Service.Data;
 using Service.Queries;
 using Service.Respone;
@@ -11,26 +13,44 @@ namespace MyHouse_CQRS_MadiaR.Controllers
 {
     [Route("Positions")]
     [ApiController]
-    public class PositionsController : Controller
+    public class PositionsStatusController : Controller
     {
         private readonly IMediator _mediator;
 
-        public PositionsController(IMediator mediator)
+        public PositionsStatusController(IMediator mediator)
         {
             _mediator = mediator;
         }
 
         [HttpGet]
-        public Task<IEnumerable<Positions>> Index()
+        public async Task<IEnumerable<Positions>> Index()
         {
-            return _mediator.Send(new GetAllPositionsQuery());
+            return await _mediator.Send(new GetAllPositionsQuery());
         }
-
 
         [HttpPost]
         public async Task<Response<Positions>> Index([FromBody] CreatePositionsCommand command)
         {
             return await _mediator.Send(command);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, [FromBody] UpdatePositionsCommand command)
+        {
+            if (command == null || command.Entity.PositionID != id)
+            {
+                return BadRequest();
+            }
+
+            return Ok(await _mediator.Send(command));
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await _mediator.Send(new DeletePositionsCommand { Id = id });
+
+            return NoContent();
         }
     }
 }

@@ -24,7 +24,7 @@ namespace Service.Query
             {
                  new Guests()
                 {
-                    GuestID = Guid.NewGuid(),
+                    GuestID = new int(),
                     FirstName = "Mạnh",
                     LastName = "Nguyễn Văn",
                     Address = "21 Thông Nhất",

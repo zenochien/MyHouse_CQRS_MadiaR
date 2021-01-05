@@ -25,5 +25,10 @@ namespace Service.Data
         public DbSet<RoomTypes> roomTypes { get; set; }
         public DbSet<Staff> staffs { get; set; }
         public DbSet<StaffRooms> staffRooms { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

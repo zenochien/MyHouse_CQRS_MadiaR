@@ -24,7 +24,7 @@ namespace Service.Query
             {
                 new BookingStatus
                     {
-                        BookingStatusID = Guid.NewGuid(),
+                        BookingStatusID = new int(),
                         Status = "Tốt",
                         Description = "Đẹp và sạch sẽ",
                         SortOrder = "1",

@@ -7,6 +7,7 @@
 
         public static Response<T> Ok<T>(T data, string message) =>
             new Response<T>(data, message, false);
+
     }
     public class Response<T>
     {

@@ -1,21 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Service.Data
 {
     public class Payments
     {
         [Key]
-        public Guid PaymentID { get; set; }
-        public Guid RoomID { get; set; }
+        public int PaymentID { get; set; }
+        public int RoomID { get; set; }
         public DateTime? Date { get; set; }
         public string Payment { get; set; }
-        public Guid PaymentTypeID { get; set; }
-        public Guid PaymentStatsID { get; set; }
+        public int PaymentTypeID { get; set; }
+        public int PaymentStatsID { get; set; }
 
         [ForeignKey("RoomID")]
         public virtual Rooms Rooms { get; set; }

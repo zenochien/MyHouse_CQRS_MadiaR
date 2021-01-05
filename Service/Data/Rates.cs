@@ -10,12 +10,12 @@ namespace Service.Data
     public class Rates
     {
         [Key]
-        public Guid RateID { get; set; }
-        public Guid RoomID { get; set; }
+        public int RateID { get; set; }
+        public int RoomID { get; set; }
         public int Rate { get; set; }
         public DateTime? FromDate { get; set; }
         public DateTime? ToDate { get; set; }
-        public Guid RateTypeID { get; set; }
+        public int RateTypeID { get; set; }
 
         [ForeignKey("RateTypeID")]
         public virtual RateTypes RateTypes { get; set; }

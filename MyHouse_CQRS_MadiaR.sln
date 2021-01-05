@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer4_Hotels", "..\..\..\Desktop\MyHotel\Hotel.IdServer\IdentityServer4_Hotels.csproj", "{FB2CE590-6E60-43CC-AE91-73309EA0FF18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelMobile", "HotelMobile\HotelMobile.csproj", "{F437D559-8274-4CB7-8515-02FFCB513F76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelMobile", "HotelMobile\HotelMobile.csproj", "{F437D559-8274-4CB7-8515-02FFCB513F76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

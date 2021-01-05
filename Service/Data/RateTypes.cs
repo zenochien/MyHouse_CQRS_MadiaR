@@ -9,7 +9,7 @@ namespace Service.Data
     public class RateTypes
     {
         [Key]
-        public Guid RateTypeID { get; set; }
+        public int RateTypeID { get; set; }
         public string RateType { get; set; }
         public string Description { get; set; }
         public string SortOrder { get; set; }

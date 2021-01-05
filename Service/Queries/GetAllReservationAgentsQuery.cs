@@ -19,7 +19,7 @@ namespace Service.Query
             {
                 new ReservationAgents()
                 {
-                    ReservationAgentID = Guid.NewGuid(),
+                    ReservationAgentID = new int(),
                     FirstName = "Thìa",
                     LastName = "Hương Văn",
                     Address = "21 Thông Mông",

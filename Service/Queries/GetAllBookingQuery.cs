@@ -24,16 +24,17 @@ namespace Service.Query
             {
                 new Booking
                 {
-                    BookingID = Guid.NewGuid(),
-                    HotelID = Guid.NewGuid(),
-                    GuestID = Guid.NewGuid(),
-                    ReservationAgentID = Guid.NewGuid(),
+                    BookingID = new int(),
+                    HotelID = new int(),
+                    GuestID = new int(),
+                    ReservationAgentID = new int(),
                     DateFrom = new DateTime(2020, 12, 02),
                     DateTo = new DateTime(2020, 11, 02),
                     RoomCount = "03",
-                    BookingStatusID = Guid.NewGuid()
+                    BookingStatusID = new int(),
                 }
             };
+
         }
     }
 }

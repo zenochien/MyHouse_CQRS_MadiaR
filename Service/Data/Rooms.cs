@@ -8,12 +8,12 @@ namespace Service.Data
     public class Rooms
     {
         [Key]
-        public Guid RoomsID { get; set; }
+        public int RoomsID { get; set; }
         public string Floor { get; set; }
-        public Guid RoomTypeID { get; set; }
+        public int RoomTypeID { get; set; }
         public string RoomNumber { get; set; }
         public string Desription { get; set; }
-        public Guid RoomStatusID { get; set; }
+        public int RoomStatusID { get; set; }
 
         [ForeignKey("RoomTypeID")]
         public virtual RoomTypes RoomTypes { get; set; }

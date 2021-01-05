@@ -19,7 +19,7 @@ namespace Service.Query
             {
                 new Hotels()
                 {
-                    HotelID = Guid.NewGuid(),
+                    HotelID = new int(),
                     HotelCode = "1234",
                     Name = "Spa Biển Đep5",
                     Motto = "SSS",

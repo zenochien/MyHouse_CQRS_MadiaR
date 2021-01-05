@@ -24,7 +24,7 @@ namespace Service.Queries
             {
                 new PaymentStatus
                 {
-                    PaymentStatusID = Guid.NewGuid(),
+                    PaymentStatusID = new int(),
                         Status = "123",
                         Description = "12334",
                         SortOrder = "2312",

@@ -19,8 +19,8 @@ namespace Service.Query
             {
                 new RoomsBooked()
                 {
-                    RoomBookedID = Guid.NewGuid(),
-                    BookingID = Guid.NewGuid(),
+                    RoomBookedID = new int(),
+                    BookingID = new int(),
                     Rate = 5
                 }
             };

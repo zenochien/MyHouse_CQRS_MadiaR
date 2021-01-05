@@ -7,7 +7,7 @@ namespace Service.Data
     public class PaymentTypes
     {
         [Key]
-        public Guid PaymentTypeID { get; set; }
+        public int PaymentTypeID { get; set; }
         public string PaymentType { get; set; }
         public string SortOrder { get; set; }
         public string Active { get; set; }

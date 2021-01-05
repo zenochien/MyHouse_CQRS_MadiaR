@@ -8,14 +8,14 @@ namespace Service.Data
     public class Booking 
     {
         [Key]
-        public Guid BookingID { get; set; }
-        public Guid HotelID { get; set; }
-        public Guid GuestID { get; set; }
-        public Guid ReservationAgentID { get; set; }
+        public int BookingID { get; set; }
+        public int HotelID { get; set; }
+        public int GuestID { get; set; }
+        public int ReservationAgentID { get; set; }
         public DateTime? DateFrom { get; set; }
         public DateTime? DateTo { get; set; }
         public string RoomCount { get; set; }
-        public Guid BookingStatusID { get; set; }
+        public int BookingStatusID { get; set; }
 
         [ForeignKey("GuestID")]
         public virtual Guests Guests { get; set; }
