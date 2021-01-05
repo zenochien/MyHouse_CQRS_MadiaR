@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyHouse_CQRS_MadiaR", "MyHouse_CQRS_MadiaR\MyHouse_CQRS_MadiaR.csproj", "{D41E9163-3089-4F23-A5BA-F49DDBF6F9E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{C1DE2693-4BBC-4E90-A39C-196262992168}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D41E9163-3089-4F23-A5BA-F49DDBF6F9E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D41E9163-3089-4F23-A5BA-F49DDBF6F9E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D41E9163-3089-4F23-A5BA-F49DDBF6F9E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D41E9163-3089-4F23-A5BA-F49DDBF6F9E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1DE2693-4BBC-4E90-A39C-196262992168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1DE2693-4BBC-4E90-A39C-196262992168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1DE2693-4BBC-4E90-A39C-196262992168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1DE2693-4BBC-4E90-A39C-196262992168}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF733658-9C85-4EE9-BFE0-C6B9465D332F}
+	EndGlobalSection
+EndGlobal
